@@ -20,7 +20,7 @@ module.exports = {
 
     root.isLoaded = () => isLoaded;
     root.load = zendeskKey => {
-      if (isLoaded || options.scriptType!=="text/javascript") {
+      if (isLoaded && options.scriptType === 'text/javascript') {
         return;
       }
 
