@@ -41,6 +41,7 @@ module.exports = {
       first.parentNode.insertBefore(script, first);
 
       script.onload = event => {
+        console.log("Zendesk loaded", script);
         isLoaded = true;
 
         if (options.hideOnLoad) {
@@ -82,6 +83,11 @@ module.exports = {
       get: function get() {
         return window.zE;
       }
+    });
+
+    // Listen for "asynLoad" event on window object
+    window.addEventListener("asynLoad", () => {
+      root.load(options.key);
     });
 
     Vue.prototype.$zendesk = root;
