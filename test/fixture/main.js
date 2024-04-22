@@ -6,6 +6,7 @@ Vue.use(Zendesk, {
   key: ZENDESK_KEY,
   disabled: true,
   hideOnLoad: true,
+  scriptType: "text/javascript",
   settings: {
     webWidget: {
       color: {
