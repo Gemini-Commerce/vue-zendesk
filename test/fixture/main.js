@@ -5,6 +5,7 @@ import Zendesk from "../../src/index.js";
 Vue.use(Zendesk, {
   key: ZENDESK_KEY,
   disabled: true,
+  manualLoad: false,
   hideOnLoad: true,
   scriptType: "text/javascript",
   settings: {

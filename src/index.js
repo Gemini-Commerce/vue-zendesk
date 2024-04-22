@@ -60,7 +60,7 @@ module.exports = {
       };
     };
 
-    if (!options.disabled) {
+    if (!options.disabled && !options.manualLoad) {
       root.load(options.key);
     }
 
@@ -86,7 +86,7 @@ module.exports = {
     });
 
     // Listen for "asynLoad" event on window object
-    window.addEventListener("asynLoad", () => {
+    window.addEventListener("asyncLoad", () => {
       root.load(options.key);
     });
 
